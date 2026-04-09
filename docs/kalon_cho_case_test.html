@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalon腸スクール 認定講師テスト — ケース記述</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#faf8f5;--surface:#ffffff;--border:#e8e2d9;--border-strong:#c8bfb0;
+--text:#2c2520;--text-muted:#8a7e74;--accent:#b5845a;--accent-light:#f5ede4;
+--radius:10px;--radius-sm:6px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:0}
+.page-header{background:var(--surface);border-bottom:1px solid var(--border);padding:2rem 2rem 1.5rem;text-align:center}
+.school-name{font-family:'Noto Serif JP',serif;font-size:11px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
+.page-header h1{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:500;color:var(--text);margin-bottom:12px}
+.meta-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.meta-badge{font-size:12px;padding:4px 14px;border-radius:99px;border:1px solid var(--border-strong);color:var(--text-muted);background:var(--bg)}
+.main{max-width:760px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.intro{background:var(--accent-light);border:1px solid var(--border-strong);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:2rem;font-size:14px;line-height:1.8;color:var(--text)}
+.intro p{margin-bottom:6px}
+.intro p:last-child{margin-bottom:0}
+.name-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem}
+.name-label{font-size:13px;font-weight:500;color:var(--text);margin-bottom:8px}
+.name-input{width:100%;padding:11px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);font-size:14px;color:var(--text);background:var(--surface);font-family:'Noto Sans JP',sans-serif;outline:none;transition:border-color 0.15s}
+.name-input:focus{border-color:var(--accent)}
+.case-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+.case-header{margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.case-tag{font-size:10px;padding:2px 10px;border-radius:99px;border:1px solid var(--border);color:var(--text-muted);margin-bottom:8px;display:inline-block}
+.tag-basic{background:#eef6f1;color:#4a7c59;border-color:#c0ddc9}
+.tag-advance{background:#f0edfb;color:#6b52b0;border-color:#c9beed}
+.tag-master{background:#fdf0ec;color:#a0422a;border-color:#e8c0b4}
+.case-title{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:500;color:var(--text);margin-bottom:8px}
+.case-profile{font-size:13px;color:var(--text-muted);line-height:1.6}
+.question-block{margin-bottom:1.25rem}
+.question-block:last-child{margin-bottom:0}
+.q-label{font-size:13px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.6}
+.q-num-badge{display:inline-block;background:var(--accent-light);color:var(--accent);font-size:11px;padding:1px 8px;border-radius:99px;margin-right:6px;font-family:'Noto Serif JP',serif}
+.answer-area{width:100%;padding:12px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);font-size:14px;color:var(--text);background:var(--surface);font-family:'Noto Sans JP',sans-serif;outline:none;transition:border-color 0.15s;resize:vertical;min-height:100px;line-height:1.7}
+.answer-area:focus{border-color:var(--accent)}
+.char-count{font-size:11px;color:var(--text-muted);text-align:right;margin-top:4px}
+.actions{display:flex;gap:12px;margin-top:2.5rem;flex-wrap:wrap;align-items:center}
+.btn{padding:12px 28px;border-radius:var(--radius-sm);border:1px solid var(--border-strong);font-size:14px;cursor:pointer;background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;transition:all 0.15s}
+.btn:hover{background:var(--accent-light)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:#9e6f4a}
+.notice{font-size:12px;color:var(--text-muted);line-height:1.6}
+.section-divider{font-family:'Noto Serif JP',serif;font-size:13px;color:var(--accent);letter-spacing:0.1em;margin:2.5rem 0 1rem;padding-bottom:8px;border-bottom:1px solid var(--border)}
+@media(max-width:600px){
+.page-header{padding:1.5rem 1rem 1.25rem}
+.main{padding:1.5rem 1rem 3rem}
+.actions{flex-direction:column}
+.btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <p class="school-name">Kalon Cho School</p>
+  <h1>認定講師テスト — ケース記述</h1>
+  <div class="meta-row">
+    <span class="meta-badge">3ケース・6問</span>
+    <span class="meta-badge">配点 20%</span>
+    <span class="meta-badge">記述式</span>
+  </div>
+</div>
+<div class="main">
+  <div class="intro">
+    <p>以下の3つのケースを読み、各設問に対してあなたの考えを記述してください。</p>
+    <p>解答後「メールで送信する」ボタンを押すと、解答内容がメールに自動入力されます。送信先を確認してから送信してください。</p>
+  </div>
+  <div class="name-section">
+    <p class="name-label">お名前</p>
+    <input class="name-input" id="student-name" type="text" placeholder="例：山田 花子" />
+  </div>
+  <div class="section-divider">ケース1 — ベーシック</div>
+  <div class="case-card">
+    <div class="case-header">
+      <span class="case-tag tag-basic">ベーシック講座</span>
+      <p class="case-title">30代女性・デスクワーク・慢性的な便秘</p>
+      <p class="case-profile">会社員。1日中デスクワークで運動習慣なし。3ヶ月以上、毎日排便がなく腹部の張りを感じている。食事は不規則で野菜が少なめ。水分摂取も少ない。</p>
+    </div>
+    <div class="question-block">
+      <p class="q-label"><span class="q-num-badge">Q1</span>この方の便秘のタイプとして最も考えられるものを答え、その理由も説明してください。</p>
+      <textarea class="answer-area" id="ans-1-1" placeholder="解答を入力してください" oninput="updateCount('ans-1-1','count-1-1')"></textarea>
+      <p class="char-count" id="count-1-1">0文字</p>
+    </div>
+    <div class="question-block">
+      <p class="q-label"><span class="q-num-badge">Q2</span>この方に対して、食事面でのアドバイスを具体的に答えてください。</p>
+      <textarea class="answer-area" id="ans-1-2" placeholder="解答を入力してください" oninput="updateCount('ans-1-2','count-1-2')"></textarea>
+      <p class="char-count" id="count-1-2">0文字</p>
+    </div>
+  </div>
+  <div class="section-divider">ケース2 — アドバンス</div>
+  <div class="case-card">
+    <div class="case-header">
+      <span class="case-tag tag-advance">アドバンス講座</span>
+      <p class="case-title">40代女性・ストレス多め・生理前に便秘悪化</p>
+      <p class="case-profile">仕事と育児を両立中で慢性的なストレスあり。生理前になると決まって便秘がひどくなる。睡眠は浅く、冷えも気になる。</p>
+    </div>
+    <div class="question-block">
+      <p class="q-label"><span class="q-num-badge">Q3</span>この方の便秘悪化の考えられる原因を、ホルモンと自律神経の観点から説明してください。</p>
+      <textarea class="answer-area" id="ans-2-1" placeholder="解答を入力してください" oninput="updateCount('ans-2-1','count-2-1')"></textarea>
+      <p class="char-count" id="count-2-1">0文字</p>
+    </div>
+    <div class="question-block">
+      <p class="q-label"><span class="q-num-badge">Q4</span>自律神経を整える観点から、この方へのアドバイスを具体的に答えてください。</p>
+      <textarea class="answer-area" id="ans-2-2" placeholder="解答を入力してください" oninput="updateCount('ans-2-2','count-2-2')"></textarea>
+      <p class="char-count" id="count-2-2">0文字</p>
+    </div>
+  </div>
+  <div class="section-divider">ケース3 — マスター</div>
+  <div class="case-card">
+    <div class="case-header">
+      <span class="case-tag tag-master">マスター講座</span>
+      <p class="case-title">30代女性・お腹の張り・納豆やヨーグルトで悪化</p>
+      <p class="case-profile">腸活に取り組んでいるが、納豆やヨーグルトを食べると逆にお腹が張る。便秘と下痢を繰り返すこともある。腸活を続けていいのか不安に感じている。</p>
+    </div>
+    <div class="question-block">
+      <p class="q-label"><span class="q-num-badge">Q5</span>この方の状態として考えられるものを答え、その理由を説明してください。</p>
+      <textarea class="answer-area" id="ans-3-1" placeholder="解答を入力してください" oninput="updateCount('ans-3-1','count-3-1')"></textarea>
+      <p class="char-count" id="count-3-1">0文字</p>
+    </div>
+    <div class="question-block">
+      <p class="q-label"><span class="q-num-badge">Q6</span>この方への食事面での対応を具体的に答えてください。</p>
+      <textarea class="answer-area" id="ans-3-2" placeholder="解答を入力してください" oninput="updateCount('ans-3-2','count-3-2')"></textarea>
+      <p class="char-count" id="count-3-2">0文字</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="btn primary" onclick="sendEmail()">メールで送信する</button>
+    <p class="notice">ボタンを押すとメールアプリが開きます。<br>送信先・内容を確認してから送信してください。</p>
+  </div>
+</div>
+<script>
+function updateCount(textareaId, countId){
+  const len = document.getElementById(textareaId).value.length;
+  document.getElementById(countId).textContent = len + '文字';
+}
+function sendEmail(){
+  const name = document.getElementById('student-name').value.trim() || '（未入力）';
+  const a11 = document.getElementById('ans-1-1').value.trim() || '（未回答）';
+  const a12 = document.getElementById('ans-1-2').value.trim() || '（未回答）';
+  const a21 = document.getElementById('ans-2-1').value.trim() || '（未回答）';
+  const a22 = document.getElementById('ans-2-2').value.trim() || '（未回答）';
+  const a31 = document.getElementById('ans-3-1').value.trim() || '（未回答）';
+  const a32 = document.getElementById('ans-3-2').value.trim() || '（未回答）';
+  const subject = encodeURIComponent('【Kalon腸スクール】認定講師テスト ケース記述 解答 — ' + name);
+  const body = encodeURIComponent(
+    '■ 受験者名\n' + name + '\n\n' +
+    '━━━━━━━━━━━━━━━━━━\n' +
+    'ケース1｜30代女性・デスクワーク・慢性的な便秘\n' +
+    '━━━━━━━━━━━━━━━━━━\n\n' +
+    '【Q1】便秘のタイプと理由\n' + a11 + '\n\n' +
+    '【Q2】食事面でのアドバイス\n' + a12 + '\n\n' +
+    '━━━━━━━━━━━━━━━━━━\n' +
+    'ケース2｜40代女性・ストレス多め・生理前に便秘悪化\n' +
+    '━━━━━━━━━━━━━━━━━━\n\n' +
+    '【Q3】考えられる原因（ホルモン・自律神経）\n' + a21 + '\n\n' +
+    '【Q4】自律神経を整えるアドバイス\n' + a22 + '\n\n' +
+    '━━━━━━━━━━━━━━━━━━\n' +
+    'ケース3｜30代女性・お腹の張り・納豆やヨーグルトで悪化\n' +
+    '━━━━━━━━━━━━━━━━━━\n\n' +
+    '【Q5】考えられる状態と理由\n' + a31 + '\n\n' +
+    '【Q6】食事面での対応\n' + a32
+  );
+  window.location.href = 'mailto:kalonchoschool@gmail.com?subject=' + subject + '&body=' + body;
+}
+</script>
+</body>
+</html>
